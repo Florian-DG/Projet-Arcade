@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.card-tuto {
+    border: solid #2d0145 2px;
+    background-color: #eda4d4;
+    border-radius: 1rem;
+    width: 40rem;
+    margin: 2rem;
+    padding: 1rem;
+    box-shadow: 5px 5px 5px     ;
+}
