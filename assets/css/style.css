@@ -1,5 +1,5 @@
 :root {
-  --backgroud : #2D0145;
+  --background : #2D0145;
   --indigo : #570163;
   --violet : #800080;
   --rose : #b752aa;
@@ -9,8 +9,9 @@
 
 
 body {
-    font-family: "Pixelify Sans", sans-serif;
-    background-color: #f0f2f5; /* Un gris très clair */
+    font-family: Arial, sans-serif;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.22) 0px, rgba(0, 0, 0, 0.22) 2px, transparent 2px, transparent 4px);
+    background-color: var(--background);
     color: #333;
     margin: 0;
     padding: 20px;
