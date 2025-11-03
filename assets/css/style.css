@@ -1,3 +1,13 @@
+:root {
+  --backgroud : #2D0145;
+  --indigo : #570163;
+  --violet : #800080;
+  --rose : #b752aa;
+  --text : #eda4d4;
+  --text2 : #fad4ed;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f2f5; /* Un gris très clair */
