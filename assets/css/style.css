@@ -1,10 +1,10 @@
 :root {
-  --background : #2D0145;
-  --indigo : #570163;
-  --violet : #800080;
-  --rose : #b752aa;
-  --text : #eda4d4;
-  --text2 : #fad4ed;
+    --background: #2D0145;
+    --indigo: #570163;
+    --violet: #800080;
+    --rose: #b752aa;
+    --text: #eda4d4;
+    --text2: #fad4ed;
 }
 
 
@@ -26,6 +26,7 @@ h1 {
     color: #4a4a4a;
     margin-bottom: 40px;
 }
+
 #game-list {
     display: flex;
     gap: 30px;
