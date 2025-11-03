@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devine le Nombre ! </title>
+    <link rel="stylesheet" href="../assets/css/jeux.css">
     <a href="../../index.html" class="btn-retour">&larr; Retour au menu</a>
     <link rel="stylesheet" href="../assets/css/pages.css"></a>
 </head>
@@ -14,6 +15,16 @@
         <h1>Jeu du Devine le nombre</h1>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis facilis eaque sapiente vitae est non ab in distinctio architecto iusto dolorem quas ipsam deserunt, quos nulla eius officiis? Quibusdam, odio?</p>
     </div>
+    <div>
+        <h1>Devine le nombre !</h1>
+        <p>J'ai choisi un nombre entre 1 et 100. Tu as 10 essais pour le trouver.</p>
+        <input type="number" id="guess" placeholder="Entre un nombre" />
+        <button id="checkBtn">Vérifier</button>
+        <button id="restartBtn">Rejouer</button>
+        <p id="compteur">Essais restants : 10</p>
+        <p id="message"></p>
+    </div>
+    <script src="../assets/js/guessnumber.js"></script>
 </body>
 
 </html>
