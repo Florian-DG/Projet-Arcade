@@ -6,7 +6,8 @@ body {
     background-color: #f0f0f0;
 }
 
-input, button {
+input,
+button {
     padding: 10px;
     font-size: 16px;
     margin: 5px;
@@ -16,4 +17,10 @@ input, button {
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
+}
+
+#compteur {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
 }
