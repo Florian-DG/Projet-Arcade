@@ -27,9 +27,28 @@ h1 {
 }
 #game-list {
     display: flex;
-    gap: 100px;
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-    max-width: 400px;;
+    gap: 30px;
+    width: 200px;
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#game-list li {
+    display: block;
+    background-color: #f0f2f5;
+    border: 2px solid purple;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 15px;
+    width: 400px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+#game-list li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
