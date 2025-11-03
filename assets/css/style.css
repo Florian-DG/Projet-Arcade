@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5; /* Un gris très clair */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #4a4a4a;
+    margin-bottom: 40px;
+}
+#game-list {
+    display: flex;
+    gap: 100px;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 400px;;
+}
