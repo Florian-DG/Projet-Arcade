@@ -1,4 +1,4 @@
-const words = ["ordinateur", "javascript", "programmation", "pendu", "developpeur"]; /* mots possibles */
+const words = ["ordinateur", "javascript", "programmation", "pendu", "developpeur", "isotherme", "abeille", "bateau", "bricolage", "groupe", "seminaire", "projet"]; /* mots possibles */
 let chosenWord = words[Math.floor(Math.random() * words.length)];
 
 const wordElement = document.getElementById("word");
