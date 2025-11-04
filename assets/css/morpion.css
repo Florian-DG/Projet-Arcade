@@ -57,16 +57,19 @@ body {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    cursor: pointer; 
+    cursor: pointer;
+    border-radius: 1rem;
 }
 
 #reset { 
     margin-top: 20px; 
     padding: 10px 20px; 
+    border-radius: 1rem;
 }
 
 #message {
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
+    color: #fad4ed;
 }
