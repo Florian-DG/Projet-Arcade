@@ -4,24 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le Morpion ! </title>
-    <link rel="stylesheet" href="../assets/css/jeux.css">
-
-    <a href="../../index.html" class="btn-retour">&larr; Retour au menu</a>
+    <title>Le Morpion !</title>
     <link rel="stylesheet" href="../assets/css/morpion.css">
     <link rel="stylesheet" href="../assets/css/pages.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <a href="../../index.html" class="btn-retour">&larr; Retour au menu</a>
+    <h1>Jeu du Morpion</h1>
     <div class="card-tuto">
-        <h1>Jeu du Morpion</h1>
         <h2>Règles du jeu</h2>
         <p>Aligner avant son adversaire, 3 symboles identiques horizontalement, verticalement ou en diagonale !</p>
     </div>
+    <div>
+        <div id="board"></div>
+        <div id="message"></div>
+        <button id="reset" type="button">Recommencer</button>
+    </div>
+    <script src="../assets/js/morpion.js"></script>
 </body>
 
 </html>
