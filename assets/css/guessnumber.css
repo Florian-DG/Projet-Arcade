@@ -26,6 +26,7 @@ button {
     padding: 10px;
     font-size: 16px;
     margin: 5px;
+    border-radius: 1rem;
 }
 
 .txt {
