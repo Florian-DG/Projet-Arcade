@@ -13,11 +13,46 @@
 
 <body>
     <h1 class="title">Bienvenue sur la page des jeux !</h1>
-    <div id="game-list">
-        <li><a href="html/guessnumber.html">Guess the Number</a> </li>
-        <li><a href="html/pendu.html">Le Pendu</a></li>
-        <li><a href="html/morpion.html">Le Morpion</a></li>
+    <div class="game-grid">
+
+        <div class="game-card">
+            <a href="./html/guessnumber.html">
+                <div class="game-image">
+                    <img src="./assets/images/guessNumber.webp" alt="Jeu du GuessNumber">
+                </div>
+                <div class="game-info">
+                    <h3>Devine le Nombre</h3>
+                    <p>Tu as 10 essais pour trouver un nombre entre 1 et 100.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-card">
+            <a href="./html/morpion.html">
+                <div class="game-image">
+                    <img src="./assets/images/morpion.webp" alt="Jeu du Morpion">
+                </div>
+                <div class="game-info">
+                    <h3>Morpion</h3>
+                    <p>Jouer à deux sur le même écran le premier qui aligne 3 de ses symboles gagne.</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="game-card">
+            <a href="./html/pendu.html">
+                <div class="game-image">
+                    <img src="./assets/images/pendu.webp" alt="Jeu du Pendu">
+                </div>
+                <div class="game-info">
+                    <h3>Pendu</h3>
+                    <p>Trouve le mot en proposant des lettres, tu as le droit à 5 erreurs.</p>
+                </div>
+            </a>
+        </div>
+
     </div>
+
 </body>
 
 </html>
