@@ -15,6 +15,12 @@ body {
     margin-top: 50px;
 }
 
+.title{
+    text-shadow: rgb(255, 113, 206) 0px 0px 20px, rgba(255, 113, 206, 0.8) 0px 0px 30px, rgba(255, 113, 206, 0.6) 0px 0px 40px, rgba(255, 113, 206, 0.4) 0px 0px 50px;
+    color: #ffff;
+    margin-bottom: 40px;
+}
+
 input,
 button {
     padding: 10px;
@@ -22,6 +28,9 @@ button {
     margin: 5px;
 }
 
+.txt {
+    color: #fad4ed;
+}
 #message {
     margin-top: 20px;
     font-size: 18px;
@@ -31,7 +40,7 @@ button {
 #compteur {
     margin-top: 10px;
     font-size: 16px;
-    color: #333;
+    color: #fad4ed;
 }
 
 .btn-retour {

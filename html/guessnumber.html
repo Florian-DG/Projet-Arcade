@@ -14,18 +14,18 @@
 
 <body>
     <a href="../../index.html" class="btn-retour">&larr; Retour au menu</a>
+    <h1 class="title">Jeu Guess the number</h1>
     <div class="card-tuto">
-        <h1>Jeu du Devine le nombre</h1>
         <h2>Règles du jeu</h2>
         <p>L'ordinateur à choisi un nombre entre 1 et 100, tu as 10 essais pour le trouver ; l'ordinateur te donne des indices bien sûr !</p>
     </div>
     <div>
-        <h1>Devine le nombre !</h1>
-        <p>J'ai choisi un nombre entre 1 et 100. Tu as 10 essais pour le trouver.</p>
+        <h1 class="txt">Devine le nombre !</h1>
+        <p class="txt">J'ai choisi un nombre entre 1 et 100. Tu as 10 essais pour le trouver.</p>
         <input type="number" id="guess" placeholder="Entre un nombre" />
         <button id="checkBtn">Vérifier</button>
         <button id="restartBtn">Rejouer</button>
-        <p id="compteur">Essais restants : 10</p>
+        <p id="compteur" class="txt">Essais restants : 10</p>
         <p id="message"></p>
     </div>
     <script src="../assets/js/guessnumber.js"></script>
