@@ -15,11 +15,12 @@ body {
     margin-top: 50px;
 }
 
-.title{
+.title {
     text-shadow: rgb(255, 113, 206) 0px 0px 20px, rgba(255, 113, 206, 0.8) 0px 0px 30px, rgba(255, 113, 206, 0.6) 0px 0px 40px, rgba(255, 113, 206, 0.4) 0px 0px 50px;
     color: #ffff;
     margin-bottom: 40px;
 }
+
 .btn-retour {
     justify-content: left;
     display: inline-flex;
@@ -71,4 +72,16 @@ body {
 #restart:hover {
     background-color: #5a6268;
     color: #ffffff;
+}
+
+#message {
+    color: #fad4ed;
+}
+
+#tries {
+    color: #fad4ed;
+}
+
+#word {
+    color: #fad4ed;
 }
