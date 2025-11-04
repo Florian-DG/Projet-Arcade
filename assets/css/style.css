@@ -22,6 +22,11 @@ body {
     box-sizing: border-box;
 }
 
+.title{
+    text-shadow: rgb(255, 113, 206) 0px 0px 20px, rgba(255, 113, 206, 0.8) 0px 0px 30px, rgba(255, 113, 206, 0.6) 0px 0px 40px, rgba(255, 113, 206, 0.4) 0px 0px 50px;
+    color: #ffff;
+}
+
 h1 {
     color: #4a4a4a;
     margin-bottom: 40px;
@@ -33,6 +38,7 @@ h1 {
     width: 200px;
     border-radius: 10px;
     transition: transform 0.2s, box-shadow 0.2s;
+    justify-content: center;
 }
 
 #game-list li {
