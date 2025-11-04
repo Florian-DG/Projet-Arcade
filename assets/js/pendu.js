@@ -9,7 +9,7 @@ const restartButton = document.getElementById("restart");
 
 let correctLetters = [];
 let wrongLetters = [];
-let maxTries = 6; /* nombre d’essais max */
+let maxTries = 9; /* nombre d’essais max */
 
 /* affiche le mot avec les lettres trouvées */
 function displayWord() {
