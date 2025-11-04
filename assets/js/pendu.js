@@ -1,4 +1,4 @@
-const words = ["ordinateur", "javascript", "programmation", "pendu", "developpeur", "isotherme", "abeille", "bateau", "bricolage", "groupe", "seminaire", "projet"]; /* mots possibles */
+const words = ["ordinateur", "javascript", "programmation", "pendu", "developpeur", "isotherme", "abeille", "bateau", "bricolage", "groupe", "seminaire", "projet", "chat", "place", "efficom", "livre", "question", "piano", "calendrier", "medecin","ballon", "vodka", "casino", "confortable", "plateau", "etoile", "timbre", "voiture", "fantaisie", "volcan"]; /* mots possibles */
 let chosenWord = words[Math.floor(Math.random() * words.length)];
 
 const wordElement = document.getElementById("word");
@@ -20,7 +20,7 @@ function displayWord() {
 
     /* verifie si gagné */
     if (chosenWord.split("").every(letter => correctLetters.includes(letter))) {
-        messageElement.textContent = "Bravo, tu as trouvé le mot !";
+        messageElement.textContent = "🎉 Bravo, tu as trouvé le mot !";
         document.removeEventListener("keydown", handleKey);
     }
 }
@@ -33,7 +33,7 @@ function updateWrongLetters() {
 
     /* verifie si perdu */
     if (triesLeft <= 0) {
-        messageElement.textContent = `Perdu ! Le mot était : ${chosenWord}`;
+        messageElement.textContent = `😢 Perdu ! Le mot était : ${chosenWord}`;
         document.removeEventListener("keydown", handleKey);
     }
 }
