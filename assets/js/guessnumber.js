@@ -1,5 +1,5 @@
 let nombreMystere = Math.floor(Math.random() * 100) + 1;
-let essaisRestants = 10;
+let essaisRestants;
 
 
 const guessInput = document.querySelector('#guess');
@@ -7,7 +7,24 @@ const message = document.querySelector('#message');
 const compteur = document.querySelector('#compteur');
 const checkBtn = document.querySelector('#checkBtn');
 const restartBtn = document.querySelector('#restartBtn');
+const difficultySelect = document.querySelector('#difficulty');
 
+function initialiserJeu() {
+    const difficulte = difficultySelect.value;
+    if (difficulte === 'facile') {
+        essaisRestants = 15;
+    } else if (difficulte === 'moyen') {
+        essaisRestants = 10;
+    } else {
+        essaisRestants = 5;
+    }
+    nombreMystere = Math.floor(Math.random() * 100) + 1;
+    message.textContent = '';
+    guessInput.value = '';
+    compteur.textContent = `Essais restants : ${essaisRestants}`;
+    guessInput.disabled = false;
+    checkBtn.disabled = false;
+}
 
 function verifier() {
     const guess = Number(guessInput.value);
@@ -47,15 +64,11 @@ function finDeJeu() {
 
 
 function rejouer() {
-    nombreMystere = Math.floor(Math.random() * 100) + 1;
-    essaisRestants = 10;
-    message.textContent = '';
-    guessInput.value = '';
-    compteur.textContent = 'Essais restants : 10';
-    guessInput.disabled = false;
-    checkBtn.disabled = false;
+    initialiserJeu();
 }
 
-
+difficultySelect.addEventListener('change', initialiserJeu);
 checkBtn.addEventListener('click', verifier);
 restartBtn.addEventListener('click', rejouer);
+
+initialiserJeu()

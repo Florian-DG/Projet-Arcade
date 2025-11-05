@@ -19,7 +19,6 @@ body {
     text-shadow: rgb(255, 113, 206) 0px 0px 20px, rgba(255, 113, 206, 0.8) 0px 0px 30px, rgba(255, 113, 206, 0.6) 0px 0px 40px, rgba(255, 113, 206, 0.4) 0px 0px 50px;
     color: #ffff;
     margin-bottom: 20px;
-    font-size: 3rem;
 }
 
 input,
@@ -32,17 +31,18 @@ button {
 
 .txt {
     color: #fad4ed;
+    font-size: 1.5rem;
 }
+
 #message {
     margin-top: 20px;
-    font-size: 18px;
     font-weight: bold;
 }
 
 #compteur {
     margin-top: 10px;
-    font-size: 16px;
     color: #fad4ed;
+    font-size: 1.5rem;
 }
 
 .btn-retour {
@@ -63,4 +63,9 @@ button {
 .btn-retour:hover {
     background-color: #5a6268;
     color: #ffffff;
+}
+
+#choicedifficulty {
+    color: var(--rose);
+    font-size: 1.5rem;
 }
