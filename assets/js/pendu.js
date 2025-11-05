@@ -7,11 +7,30 @@ const triesElement = document.querySelector("#tries span");
 const messageElement = document.getElementById("message");
 const restartButton = document.getElementById("restart");
 const keyboardDiv = document.querySelector("#keyboard");
-
+const difficultySelect = document.getElementById("difficulty");   
 
 let correctLetters = [];
 let wrongLetters = [];
 let maxTries = 8;
+
+/* choisir la difficulte */
+function chooseWordByDifficulty() {
+    const level = difficultySelect.value;
+
+    let filteredWords = [];
+    if (level === "easy") {
+        filteredWords = words.filter(w => w.length <= 5);
+        maxTries = 8;
+    } else if (level === "medium") {
+        filteredWords = words.filter(w => w.length > 5 && w.length <= 9);
+        maxTries = 8;
+    } else {
+        filteredWords = words.filter(w => w.length > 9);
+        maxTries = 8;
+    }
+
+    return filteredWords[Math.floor(Math.random() * filteredWords.length)];
+}
 
 /* affiche le mot avec les lettres trouvées */
 function displayWord() {
@@ -112,7 +131,7 @@ restartButton.addEventListener("click", () => {
     correctLetters = [];
     wrongLetters = [];
     messageElement.textContent = "";
-    chosenWord = words[Math.floor(Math.random() * words.length)];
+    chosenWord = chooseWordByDifficulty(); /* choix difficulté */
     triesElement.textContent = maxTries;
     document.addEventListener("keydown", handleKey);
     createKeyboard();
