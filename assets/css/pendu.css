@@ -87,3 +87,110 @@ body {
 #word {
     color: #fad4ed;
 }
+
+#hangman {
+    position: relative;
+    width: 250px;
+    height: 260px;
+    margin: 30px auto;
+}
+
+.gallow, .body {
+    display: none;
+    position: absolute;
+    background: var(--rose);
+}
+
+.base {
+    width: 140px;
+    height: 10px;
+    bottom: 0;
+    left: 40px;
+}
+
+.pole {
+    width: 10px;
+    height: 200px;
+    bottom: 10px;
+    left: 90px; 
+}
+
+.top {
+    width: 100px;
+    height: 10px;
+    bottom: 210px;
+    left: 90px; 
+}
+
+.rope {
+    width: 3px;
+    height: 25px;
+    bottom: 190px;
+    left: 187px; 
+}
+
+.head {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--rose);
+    border-radius: 50%;
+    bottom: 150px;
+    left: 165px;
+}
+
+.torso {
+    width: 4px;
+    height: 60px;
+    bottom: 90px;
+    left: 185px;
+}
+
+.left-arm, .right-arm {
+    width: 35px;
+    height: 4px;
+    bottom: 130px;
+}
+
+.left-arm {
+    left: 150px;
+    transform: rotate(-25deg);
+}
+
+.right-arm {
+    left: 185px;
+    transform: rotate(25deg);
+}
+
+.left-leg, .right-leg {
+    width: 35px;
+    height: 4px;
+    bottom: 80px;
+}
+
+.left-leg {
+    left: 152px;
+    transform: rotate(-30deg);
+}
+
+.right-leg {
+    left: 184px;
+    transform: rotate(30deg);
+}
+
+
+#keyboard {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#keyboard button {
+    margin: 3px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: var(--text);
+}
+
+#keyboard button:disabled {
+    background-color: var(--violet);
+}
