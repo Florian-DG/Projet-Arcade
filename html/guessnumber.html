@@ -17,11 +17,21 @@
     <h1 class="title">Jeu Guess the number</h1>
     <div class="card-tuto">
         <h2>Règles du jeu</h2>
-        <p>L'ordinateur à choisi un nombre entre 1 et 100, tu as 10 essais pour le trouver ; l'ordinateur te donne des indices bien sûr !</p>
+        <p>L'ordinateur à choisi un nombre entre 1 et 100, tu as un certain nombre d'essais pour le trouver ;
+            l'ordinateur te donne des indices bien sûr !</p>
     </div>
     <div>
-        <h1 class="txt">Devine le nombre !</h1>
-        <p class="txt">J'ai choisi un nombre entre 1 et 100.<br> Tu as 10 essais pour le trouver.</p>
+        <h3 class="txt">Devine le nombre !</h3>
+        <p id="choicedifficulty">
+        <label for="difficulty">Choisis la difficulté :</label>
+        <select id="difficulty">
+            <option value="facile">Facile (15 essais)</option>
+            <option value="moyen" selected>Moyen (10 essais)</option>
+            <option value="difficile">Difficile (5 essais)</option>
+        </select>
+        </p>
+        <br><br>
+        <p class="txt">J'ai choisi un nombre entre 1 et 100.</p>
         <input type="number" id="guess" placeholder="Entre un nombre" />
         <button id="checkBtn">Vérifier</button>
         <button id="restartBtn">Rejouer</button>
