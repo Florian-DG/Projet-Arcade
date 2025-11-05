@@ -5,7 +5,7 @@ const wordElement = document.getElementById("word");
 const wrongLettersElement = document.querySelector("#wrong-letters span");
 const triesElement = document.querySelector("#tries span");
 const messageElement = document.getElementById("message");
-const restartButton = document.getElementById("restart");
+const restartButton = document.getElementById("reset");
 const keyboardDiv = document.querySelector("#keyboard");
 const difficultySelect = document.getElementById("difficulty");   
 
