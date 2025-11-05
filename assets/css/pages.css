@@ -52,5 +52,21 @@ h3 {
   font-size: 3rem;
 }
 
+#reset { 
+    margin-top: 20px; 
+    padding: 10px 20px; 
+    border-radius: 1rem;
+    font-family: "Pixelify Sans", sans-serif;
+    background-color: #6c757d;
+    color: #ffffff;
+    font-weight: bold;
+    transition: 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
 
+#reset:hover {
+    background-color: #5a6268;
+    color: #ffffff;
+}
 
