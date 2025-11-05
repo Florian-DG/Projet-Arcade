@@ -6,6 +6,8 @@ const wrongLettersElement = document.querySelector("#wrong-letters span");
 const triesElement = document.querySelector("#tries span");
 const messageElement = document.getElementById("message");
 const restartButton = document.getElementById("restart");
+const keyboardDiv = document.getElementById("keyboard");
+
 
 let correctLetters = [];
 let wrongLetters = [];
@@ -22,6 +24,7 @@ function displayWord() {
     if (chosenWord.split("").every(letter => correctLetters.includes(letter))) {
         messageElement.textContent = "🎉 Bravo, tu as trouvé le mot !";
         document.removeEventListener("keydown", handleKey);
+        disableKeyboard();
     }
 }
 
@@ -41,7 +44,11 @@ function updateWrongLetters() {
 /* touches clavier */
 function handleKey(e) {
     const letter = e.key.toLowerCase();
-    /* Vérifie que c’est une lettre */
+    handleLetter(letter);
+}
+
+/* Gestion des lettres (physique ou clavier visuel) */
+function handleLetter(letter) {
     if (letter.match(/[a-z]/) && letter.length === 1) {
         if (chosenWord.includes(letter)) {
             if (!correctLetters.includes(letter)) {
@@ -54,7 +61,28 @@ function handleKey(e) {
                 updateWrongLetters();
             }
         }
+        const button = document.querySelector(`#key-${letter}`);
+        if (button) button.disabled = true;
     }
+}
+
+/* Création du clavier visuel */
+function createKeyboard() {
+    keyboardDiv.innerHTML = "";
+    const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+    alphabet.forEach(letter => {
+        const button = document.createElement("button");
+        button.textContent = letter.toUpperCase();
+        button.id = `key-${letter}`;
+        button.addEventListener("click", () => handleLetter(letter));
+        keyboardDiv.appendChild(button);
+    });
+}
+
+/* Désactive le clavier quand fini */
+function disableKeyboard() {
+    const buttons = keyboardDiv.querySelectorAll("button");
+    buttons.forEach(btn => btn.disabled = true);
 }
 
 /* rejouer */
@@ -65,11 +93,13 @@ restartButton.addEventListener("click", () => {
     chosenWord = words[Math.floor(Math.random() * words.length)];
     triesElement.textContent = maxTries;
     document.addEventListener("keydown", handleKey);
+    createKeyboard();
     displayWord();
     updateWrongLetters();
 });
 
 /* Démarrer */
+createKeyboard();
 document.addEventListener("keydown", handleKey);
 displayWord();
 updateWrongLetters();
