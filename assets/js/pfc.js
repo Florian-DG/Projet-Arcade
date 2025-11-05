@@ -13,4 +13,3 @@ function render() {
         board.appendChild(div);
     });
 }
-
