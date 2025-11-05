@@ -22,35 +22,36 @@
             mot choisi un trait du pendu apparé, tu as le droit à 8 essais !</p>
     </div>
 
-    <div id="hangman">
-        <div class="gallow base"></div>
-        <div class="gallow pole"></div>
-        <div class="gallow top"></div>
-        <div class="gallow rope"></div>
-
-        <div class="body head"></div>
-        <div class="body torso"></div>
-        <div class="body left-arm"></div>
-        <div class="body right-arm"></div>
-        <div class="body left-leg"></div>
-        <div class="body right-leg"></div>
-    </div>
-
-    <div id="word"></div>
-    <p id="wrong-letters">Lettres fausses : <span></span></p>
-    <p id="tries">Essais restants : <span></span></p>
-
-    <p id="message"></p>
-
-    <label for="difficulty">Choisis la difficulté :</label>
-    <select id="difficulty">
-        <option value="easy">Facile (5 lettres ou moins)</option>
-        <option value="medium" selected>Moyen (entre 5 et 9 lettres)</option>
-        <option value="hard">Difficile (plus que 9 lettres)</option>
-    </select>
-
-
+    <p id="choicedifficulty">
+        <label for="difficulty">Choisis la difficulté :</label>
+        <select id="difficulty">
+            <option value="easy">Facile (5 lettres ou moins)</option>
+            <option value="medium" selected>Moyen (entre 5 et 9 lettres)</option>
+            <option value="hard">Difficile (plus que 9 lettres)</option>
+        </select>
+    </p>
     <button id="restart">Rejouer</button>
+    <div class="container">
+        <div id="hangman">
+            <div class="gallow base"></div>
+            <div class="gallow pole"></div>
+            <div class="gallow top"></div>
+            <div class="gallow rope"></div>
+
+            <div class="body head"></div>
+            <div class="body torso"></div>
+            <div class="body left-arm"></div>
+            <div class="body right-arm"></div>
+            <div class="body left-leg"></div>
+            <div class="body right-leg"></div>
+        </div>
+        <div id="letters">
+            <div id="word"></div>
+            <p id="wrong-letters">Lettres fausses : <span></span></p>
+            <p id="tries">Essais restants : <span></span></p>
+        </div>
+    </div>
+    <p id="message"></p>
 
     <div id="keyboard"></div>
 
