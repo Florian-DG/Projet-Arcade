@@ -39,26 +39,6 @@ button {
     font-size: 1.5rem;
 }
 
-.btn-retour {
-    justify-content: left;
-    display: flex;
-    padding: 5px 10px;
-    margin-bottom: 15px;
-    background-color: #6c757d;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: 0.2s ease;
-    max-width: 10rem;
-    margin-left: 10px;
-}
-
-.btn-retour:hover {
-    background-color: #5a6268;
-    color: #ffffff;
-}
-
 #choicedifficulty {
     color: var(--rose);
     font-size: 1.5rem;
