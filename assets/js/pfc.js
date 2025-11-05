@@ -12,4 +12,5 @@ function render() {
         div.addEventListener('click', () => play(i));
         board.appendChild(div);
     });
-}               
+}
+
