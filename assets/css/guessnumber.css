@@ -5,6 +5,9 @@
     --rose: #b752aa;
     --text: #eda4d4;
     --text2: #fad4ed;
+    --ecriturebtn: #ffffff;
+    --backbtn: #6c757d;
+    --backbtnhover: #5a6268;
 }
 
 body {
@@ -24,7 +27,7 @@ button {
 }
 
 .txt {
-    color: #fad4ed;
+    color: var(--text2);
     font-size: 1.5rem;
 }
 
@@ -35,7 +38,7 @@ button {
 
 #compteur {
     margin-top: 10px;
-    color: #fad4ed;
+    color: var(--text2);
     font-size: 1.5rem;
 }
 
