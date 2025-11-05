@@ -1,4 +1,4 @@
-const words = ["ordinateur", "javascript", "programmation", "pendu", "developpeur", "isotherme", "abeille", "bateau", "bricolage", "groupe", "seminaire", "projet", "chat", "place", "efficom", "livre", "question", "piano", "calendrier", "medecin","ballon", "vodka", "casino", "confortable", "plateau", "etoile", "timbre", "voiture", "fantaisie", "volcan"]; /* mots possibles */
+const words = ["ordinateur", "javascript", "programmation", "pendu", "developpeur", "isotherme", "abeille", "bateau", "bricolage", "groupe", "seminaire", "projet", "chat", "place", "efficom", "livre", "question", "piano", "calendrier", "medecin", "ballon", "vodka", "casino", "confortable", "plateau", "etoile", "timbre", "voiture", "fantaisie", "volcan"]; /* mots possibles */
 let chosenWord = words[Math.floor(Math.random() * words.length)];
 
 const wordElement = document.getElementById("word");
@@ -6,12 +6,12 @@ const wrongLettersElement = document.querySelector("#wrong-letters span");
 const triesElement = document.querySelector("#tries span");
 const messageElement = document.getElementById("message");
 const restartButton = document.getElementById("restart");
-const keyboardDiv = document.getElementById("keyboard");
+const keyboardDiv = document.querySelector("#keyboard");
 
 
 let correctLetters = [];
 let wrongLetters = [];
-let maxTries = 9; /* nombre d’essais max */
+let maxTries = 8;
 
 /* affiche le mot avec les lettres trouvées */
 function displayWord() {
@@ -28,16 +28,38 @@ function displayWord() {
     }
 }
 
+/* affiche le pendu au fur et à mesure */
+function drawHangman() {
+    const gallowParts = document.querySelectorAll(".gallow");
+    const bodyParts = document.querySelectorAll(".body");
+    const errors = wrongLetters.length;
+
+    gallowParts.forEach(p => p.style.display = "none");
+    bodyParts.forEach(p => p.style.display = "none");
+
+    if (errors >= 1) {
+        gallowParts[0].style.display = "block";
+        gallowParts[1].style.display = "block";
+    }if (errors >= 2) {
+        gallowParts[2].style.display = "block";
+        gallowParts[3].style.display = "block";
+    }for (let i = 0; i < bodyParts.length && i < errors - 2; i++) {
+        bodyParts[i].style.display = "block";
+    }
+}
+
 /* compteur lettre fausse */
 function updateWrongLetters() {
     wrongLettersElement.textContent = wrongLetters.join(", ");
     const triesLeft = maxTries - wrongLetters.length;
     triesElement.textContent = triesLeft;
+    drawHangman();
 
     /* verifie si perdu */
     if (triesLeft <= 0) {
         messageElement.textContent = `😢 Perdu ! Le mot était : ${chosenWord}`;
         document.removeEventListener("keydown", handleKey);
+        disableKeyboard();
     }
 }
 
@@ -96,6 +118,7 @@ restartButton.addEventListener("click", () => {
     createKeyboard();
     displayWord();
     updateWrongLetters();
+
 });
 
 /* Démarrer */
@@ -103,3 +126,4 @@ createKeyboard();
 document.addEventListener("keydown", handleKey);
 displayWord();
 updateWrongLetters();
+drawHangman();
