@@ -17,8 +17,11 @@
   margin-right: auto;
 }
 
-h1 {
-  font-size: 5rem;
+.title{
+    text-shadow: rgb(255, 113, 206) 0px 0px 20px, rgba(255, 113, 206, 0.8) 0px 0px 30px, rgba(255, 113, 206, 0.6) 0px 0px 40px, rgba(255, 113, 206, 0.4) 0px 0px 50px;
+    color: #ffff;
+    margin-bottom: 20px;
+    font-size: 5rem;
 }
 
 h2 {
