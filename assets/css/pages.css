@@ -63,6 +63,7 @@ h3 {
     transition: 0.2s ease;
     cursor: pointer;
     text-decoration: none;
+    margin-bottom: 20px;
 }
 
 #reset:hover {
