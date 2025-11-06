@@ -21,20 +21,32 @@
         <p>Choisis une option parmi les 3 et essayes de vaincre l'ordinateur. Les Ciseaux battent la Feuille, la Feuille
             bat la Pierre, la Pierre bat les Ciseaux</p>
     </div>
-    <div>
-        <div id="board">
-            <div id="choose">
-                <button onclick="choose(0)">img papier</button>
-                <button onclick="choose(1)">img pierre</button>
-                <button onclick="choose(2)">img ciso</button>
+
+    <div class="container">
+        <p>Choisis ton coup :</p>
+        <div>
+            <button onclick="jouer('pierre')">Pierre</button>
+            <button onclick="jouer('feuille')">Feuille</button>
+            <button onclick="jouer('ciseaux')">Ciseaux</button>
+        </div>
+
+        <div id="combat">
+            <div>
+                <p>Toi</p>
+                <img id="joueurImg" src="" alt="choix joueur">
             </div>
-            <div id="result">
-                
+
+            <div id="vs">VS</div>
+
+            <div>
+                <p>Ordi</p>
+                <img id="ordiImg" src="" alt="choix ordi">
             </div>
         </div>
-        <div id="message"></div>
-        <button id="reset" type="button">Recommencer</button>
+
+        <p id="resultat"></p>
     </div>
+
 
     <script src="../assets/js/pfc.js"></script>
 </body>
