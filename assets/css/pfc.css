@@ -18,7 +18,7 @@ body {
     margin-top: 20px;
 }
 
-.title{
+.title {
     text-shadow: rgb(255, 113, 206) 0px 0px 20px, rgba(255, 113, 206, 0.8) 0px 0px 30px, rgba(255, 113, 206, 0.6) 0px 0px 40px, rgba(255, 113, 206, 0.4) 0px 0px 50px;
     color: var(--ecriturebtn);
     margin-bottom: 20px;
@@ -41,6 +41,22 @@ body {
 }
 
 .btn-retour:hover {
+    background-color: #5a6268;
+    color: #ffffff;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cells{
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
     background-color: var(--backbtnhover);
     color: var(--ecriturebtn);
 }
