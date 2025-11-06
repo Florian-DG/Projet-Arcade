@@ -1,6 +1,7 @@
 const grid = document.getElementById("grid");
 const scoreDisplay = document.getElementById("score");
 const timerDisplay = document.getElementById("timer");
+const scoremaxDisplay = document.getElementById("scoremax");
 const resetBtn = document.getElementById("reset");
 
 let score = 0;
@@ -8,6 +9,7 @@ let activeCell = null;
 let timeLeft = 30; /* durée du jeu en secondes */
 let timerInterval = null;
 let gameActive = false;
+let scoremax = 0;
 
 /* Création du tab */
 for (let i = 0; i < 16; i++) {
@@ -65,6 +67,10 @@ function endGame() {
 
     const endMessage = document.getElementById("endMessage");
     endMessage.textContent = `⏰ Temps écoulé ! Ton score est de ${score} points.`;
+    if (score > scoremax) {
+        scoremax = score;
+        scoremaxDisplay.textContent = scoremax;
+    }
 }
 
 
