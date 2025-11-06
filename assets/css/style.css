@@ -90,6 +90,10 @@ body {
     padding: 1rem;
 }
 
+.game-card h2 {
+    color: var(--ecriturebtn);
+}
+
 .game-card h3 {
     color: var(--text2);
     margin-bottom: 0.5rem;
