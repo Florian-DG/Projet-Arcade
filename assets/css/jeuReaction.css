@@ -45,7 +45,21 @@ body {
   color: #fad4ed;
 }
 
-.scoree {
+#timer {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fad4ed;
+}
+
+.infor {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fad4ed;
+}
+
+#endMessage {
   margin-top: 20px;
   font-size: 1.5rem;
   font-weight: bold;
