@@ -1,22 +1,53 @@
 :root {
-    --background: #2D0145;
-    --indigo: #570163;
-    --violet: #800080;
-    --rose: #b752aa;
-    --text: #eda4d4;
-    --text2: #fad4ed;
+  --background: #2D0145;
+  --indigo: #570163;
+  --violet: #800080;
+  --rose: #b752aa;
+  --text: #eda4d4;
+  --text2: #fad4ed;
 }
 
 body {
-    font-family: "Pixelify Sans", sans-serif;
-    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.22) 0px, rgba(0, 0, 0, 0.22) 2px, transparent 2px, transparent 4px);
-    background-color: var(--background);
-    text-align: center;
-    margin-top: 20px;
+  font-family: "Pixelify Sans", sans-serif;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.22) 0px, rgba(0, 0, 0, 0.22) 2px, transparent 2px, transparent 4px);
+  background-color: var(--background);
+  text-align: center;
+  margin-top: 20px;
 }
 
-.cell{
-    width: 40px;
-    height: 40px;
-    border: 1px solid white;
+.cell {
+  background-color: #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cell.active {
+  background-color: #4caf50 !important;
+  /* vert vif */
+}
+
+
+#grid {
+
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(4, 80px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+#score {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fad4ed;
+}
+
+.scoree {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fad4ed;
 }

@@ -5,32 +5,43 @@ const resetBtn = document.getElementById("reset");
 let score = 0;
 let activeCell = null;
 
-/* creer le tableau */
+// Création des 16 cases
 for (let i = 0; i < 16; i++) {
-    const cell = document.createElement("div");
-    cell.classList.add("cell");
-    grid.appendChild(cell);
-    cell.addEventListener("click", () => {
-        if (cell === activeCell) {
-            score++;
-            scoreDisplay.textContent = `Score: ${score}`;
-            activateRandomCell();
-        }
-    });
+  const cell = document.createElement("div");
+  cell.classList.add("cell");
+  grid.appendChild(cell);
+
+  // Gestion du clic sur chaque case
+  cell.addEventListener("click", () => {
+    if (cell === activeCell) {
+      score++;
+      scoreDisplay.textContent = score;
+      setRandomActiveCell();
+    }
+  });
 }
 
-/* activer une case aléatoire */
+// Fonction pour allumer une case aléatoire
 function setRandomActiveCell() {
-    /* Retire l’ancienne case active */
-    if (activeCell) activeCell.classList.remove("active");
+  const cells = document.querySelectorAll(".cell");
 
-    /* Bouton Recommencer */
-    resetBtn.addEventListener("click", () => {
-        score = 0;
-        scoreDisplay.textContent = score;
-        setRandomActiveCell();
-    });
+  // Enlève l'ancienne case active (si elle existe)
+  if (activeCell) {
+    activeCell.classList.remove("active");
+  }
+
+  // Choisir une nouvelle case aléatoire
+  const randomIndex = Math.floor(Math.random() * cells.length);
+  activeCell = cells[randomIndex];
+  activeCell.classList.add("active");
 }
 
-    /* Démarrage du jeu */
-    setRandomActiveCell();
+// Réinitialiser le jeu
+resetBtn.addEventListener("click", () => {
+  score = 0;
+  scoreDisplay.textContent = score;
+  setRandomActiveCell();
+});
+
+// Lancer le jeu dès le début
+setRandomActiveCell();

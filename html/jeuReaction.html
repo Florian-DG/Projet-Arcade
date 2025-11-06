@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +11,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <a href="../../index.html" class="btn-retour">&larr; Retour au menu</a>
     <h1 class="title">Jeu de la réaction</h1>
     <div class="card-tuto">
         <h2>Règles du jeu</h2>
-        <p>aller le plus vite possible et toucher la case du tableau qui s'illuminera en premier puis enchainer avec les suivantes !</p>
+        <p>aller le plus vite possible et toucher la case du tableau qui s'illuminera en premier puis enchainer avec les
+            suivantes !</p>
     </div>
+    <div id="grid"></div>
+
     <div>
-        <p>Score : <span id="score">0</span></p>
-        <div id="grid"></div>
+        <p class="scoree">Score : <span id="score">0</span></p>
         <button id="reset" type="button">Recommencer</button>
     </div>
     <script src="../assets/js/jeuReaction.js"></script>
 </body>
+
 </html>
