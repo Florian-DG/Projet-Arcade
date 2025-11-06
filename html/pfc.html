@@ -14,13 +14,27 @@
 
 <body>
     <a href="../../index.html" class="btn-retour">&larr; Retour au menu</a>
-    
+
     <h1 class="title">Jeu du Pierre Feuille Ciseaux</h1>
     <div class="card-tuto">
         <h2>Règles du jeu</h2>
-        <p>Choisis une option parmi les 3 et essayes de vaincre l'ordinateur. Les Ciseaux battent la Feuille, la Feuille bat la Pierre, la Pierre bat les Ciseaux</p>
+        <p>Choisis une option parmi les 3 et essayes de vaincre l'ordinateur. Les Ciseaux battent la Feuille, la Feuille
+            bat la Pierre, la Pierre bat les Ciseaux</p>
     </div>
-    
+    <div>
+        <div id="board">
+            <div id="choose">
+                <button onclick="choose(0)">img papier</button>
+                <button onclick="choose(1)">img pierre</button>
+                <button onclick="choose(2)">img ciso</button>
+            </div>
+            <div id="result">
+                
+            </div>
+        </div>
+        <div id="message"></div>
+        <button id="reset" type="button">Recommencer</button>
+    </div>
 
     <script src="../assets/js/pfc.js"></script>
 </body>
