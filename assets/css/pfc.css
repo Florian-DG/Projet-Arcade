@@ -5,6 +5,9 @@
     --rose: #b752aa;
     --text: #eda4d4;
     --text2: #fad4ed;
+    --ecriturebtn: #ffffff;
+    --backbtn: #6c757d;
+    --backbtnhover: #5a6268;
 }
 
 body {
@@ -15,29 +18,67 @@ body {
     margin-top: 20px;
 }
 
-.title{
-    text-shadow: rgb(255, 113, 206) 0px 0px 20px, rgba(255, 113, 206, 0.8) 0px 0px 30px, rgba(255, 113, 206, 0.6) 0px 0px 40px, rgba(255, 113, 206, 0.4) 0px 0px 50px;
-    color: #ffff;
-    margin-bottom: 20px;
-    font-size: 3rem;
-}
-
-.btn-retour {
-    justify-content: left;
+#combat {
     display: flex;
-    padding: 5px 10px;
-    margin-bottom: 15px;
-    background-color: #6c757d;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: 0.2s ease;
-    max-width: 10rem;
-    margin-left: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
 }
 
-.btn-retour:hover {
-    background-color: #5a6268;
-    color: #ffffff;
+@media (min-width: 1100px) {
+    #combat {
+        margin-left: 8rem;
+        margin-right: 8rem;
+    }
+}
+
+#combat img {
+    height: auto;
+    display: block;
+    max-width: 320px;
+}
+
+.container p {
+    font-size: 2rem;
+    color: var(--rose);
+}
+
+#combat div {
+    align-items: center;
+    max-width: 320px;
+}
+
+button {
+    margin: 15px;
+    padding: 8px 12px;
+    font-size: 25px;
+    font-family: "Pixelify Sans", sans-serif;
+    cursor: pointer;
+    background-color: var(--rose);
+    color: var(--ecriturebtn);
+    box-shadow: 5px 5px 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 2px 2px 2px;
+    transform: translateY(-2px);
+}
+
+.container {
+    text-align: center;
+}
+
+#resultat {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3rem;
+    color: var(--rose);
+}
+
+#vs {
+    font-size: 5rem;
+    color: var(--text);
 }
