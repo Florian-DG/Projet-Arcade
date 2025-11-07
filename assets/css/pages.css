@@ -83,3 +83,6 @@ h3 {
     color: var(--ecriturebtn);
 }
 
+iframe{
+    display: none;
+}
