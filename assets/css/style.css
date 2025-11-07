@@ -108,3 +108,7 @@ body {
 .game-card a{
   text-decoration: none;
 }
+
+iframe{
+    display: none;
+}
